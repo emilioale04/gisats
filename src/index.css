@@ -1,0 +1,237 @@
+/* CSS Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* ========================================
+     COLORES PRINCIPALES - MODIFICA AQUÍ
+     ======================================== */
+  
+  /* Verdes */
+  --primary-green: #3d6b1f;
+  --secondary-green: #557a2e;
+  --accent-green: #7d9f4c;
+  --dark-green: #2d5016;
+  
+  /* Beige/Crema */
+  --beige-light: #faf8f3;
+  --beige-medium: #f0ebe3;
+  --beige-dark: #d4c5a9;
+  
+  /* Cafés */
+  --brown-dark: #5a3d2a;
+  --brown-medium: #7a5940;
+  --brown-light: #a68a6d;
+  
+  /* Textos */
+  --text-dark: #333333;
+  --text-light: #666666;
+  --text-muted: #999999;
+  
+  /* Fondos */
+  --bg-white: #ffffff;
+  --bg-light: #faf8f3;
+  --bg-medium: #f8f8f8;
+  
+  /* Bordes */
+  --border-color: #e0e0e0;
+  --border-color-dark: #cccccc;
+  
+  /* ========================================
+     TAMAÑOS Y ESPACIADO
+     ======================================== */
+  
+  /* Contenedor máximo */
+  --max-width: 1200px;
+  
+  /* Espaciado */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 1rem;
+  --spacing-md: 1.5rem;
+  --spacing-lg: 2rem;
+  --spacing-xl: 3rem;
+  --spacing-xxl: 4rem;
+  
+  /* Padding de secciones */
+  --section-padding-vertical: 3rem;
+  --section-padding-horizontal: 2rem;
+  
+  /* ========================================
+     TIPOGRAFÍA
+     ======================================== */
+  
+  /* Fuentes */
+  --font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  
+  /* Tamaños de fuente */
+  --font-size-xs: 0.8rem;
+  --font-size-sm: 0.9rem;
+  --font-size-base: 0.95rem;
+  --font-size-md: 1rem;
+  --font-size-lg: 1.15rem;
+  --font-size-xl: 1.25rem;
+  
+  /* Tamaños de títulos */
+  --h1-size: 2.25rem;
+  --h2-size: 2rem;
+  --h3-size: 1.5rem;
+  --h4-size: 1.25rem;
+  --h5-size: 1.15rem;
+  
+  /* Pesos de fuente */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+  
+  /* Altura de línea */
+  --line-height-tight: 1.3;
+  --line-height-normal: 1.6;
+  --line-height-relaxed: 1.7;
+  
+  /* ========================================
+     BORDES Y SOMBRAS
+     ======================================== */
+  
+  /* Radio de borde */
+  --border-radius-sm: 3px;
+  --border-radius-md: 5px;
+  --border-radius-lg: 10px;
+  
+  /* Sombras */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 3px 10px rgba(0, 0, 0, 0.1);
+  
+  /* ========================================
+     TRANSICIONES
+     ======================================== */
+  
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  
+  /* ========================================
+     CONFIGURACIÓN BASE
+     ======================================== */
+  
+  font-family: var(--font-family);
+  line-height: var(--line-height-normal);
+  font-weight: var(--font-weight-normal);
+  font-size: 16px;
+  
+  /* Smooth rendering */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--bg-white);
+  color: var(--text-dark);
+}
+
+#root {
+  width: 100%;
+}
+
+/* Tipografía Global */
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  color: var(--text-dark);
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--h1-size);
+}
+
+h2 {
+  font-size: var(--h2-size);
+}
+
+h3 {
+  font-size: var(--h3-size);
+}
+
+h4 {
+  font-size: var(--h4-size);
+}
+
+h5 {
+  font-size: var(--h5-size);
+}
+
+p {
+  margin-bottom: 1em;
+  color: var(--text-light);
+  line-height: var(--line-height-normal);
+}
+
+a {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--secondary-green);
+}
+
+button {
+  font-family: var(--font-family);
+}
+
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-medium);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-light);
+  border-radius: var(--border-radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-dark);
+}
+
+/* ========================================
+   CLASES UTILITARIAS GLOBALES
+   ======================================== */
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--section-padding-horizontal);
+}
+
+.section {
+  padding: var(--section-padding-vertical) var(--section-padding-horizontal);
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mt-sm { margin-top: var(--spacing-sm); }
+.mt-md { margin-top: var(--spacing-md); }
+.mt-lg { margin-top: var(--spacing-lg); }
+.mt-xl { margin-top: var(--spacing-xl); }
+
+.mb-sm { margin-bottom: var(--spacing-sm); }
+.mb-md { margin-bottom: var(--spacing-md); }
+.mb-lg { margin-bottom: var(--spacing-lg); }
+.mb-xl { margin-bottom: var(--spacing-xl); }
+

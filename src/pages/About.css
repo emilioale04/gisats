@@ -1,0 +1,314 @@
+.about {
+  min-height: 100vh;
+}
+
+/* Banner */
+.about-banner {
+  background: var(--beige-light);
+  border-bottom: 1px solid var(--border-color);
+  padding: 2.5rem 2rem;
+  text-align: center;
+}
+
+.banner-content h1 {
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.banner-content p {
+  font-size: 1rem;
+  color: var(--text-light);
+}
+
+/* Mission and Vision */
+.mission-vision {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+}
+
+.mv-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.mv-card {
+  background-color: var(--beige-light);
+  padding: 2rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  text-align: left;
+  transition: box-shadow 0.2s ease;
+}
+
+.mv-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.mv-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.mv-card h2 {
+  color: var(--text-dark);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.mv-card p {
+  color: var(--text-light);
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+
+/* Objectives */
+.objectives {
+  background-color: var(--beige-light);
+  padding: 3rem 2rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.objectives-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.objective-card {
+  background: #ffffff;
+  padding: 1.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+  border-left: 3px solid var(--primary-green);
+}
+
+.objective-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.objective-number {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: rgba(61, 107, 31, 0.15);
+}
+
+.objective-card h3 {
+  color: var(--text-dark);
+  margin-bottom: 0.75rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  padding-right: 2.5rem;
+}
+
+.objective-card p {
+  color: var(--text-light);
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* History */
+.history {
+  background-color: #e8dcc4;
+  padding: 4rem 2rem;
+}
+
+.history-content {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #f5f5dc;
+  padding: 2.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.history-content p {
+  color: #5a3d2a;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1.05rem;
+}
+
+.history-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Team Members */
+.team {
+  background-color: #ffffff;
+  padding: 3rem 2rem;
+}
+
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+.team-card {
+  background-color: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: 3px;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease;
+}
+
+.team-card:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.team-photo {
+  background: var(--beige-light);
+  padding: 2.5rem;
+  text-align: center;
+  font-size: 4.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.team-info {
+  padding: 1.5rem;
+}
+
+.team-info h3 {
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.team-role {
+  color: var(--primary-green);
+  font-weight: 500;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.team-bio {
+  color: var(--text-light);
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.team-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.team-links a {
+  color: var(--primary-green);
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.team-links a:hover {
+  color: var(--secondary-green);
+  text-decoration: underline;
+}
+
+/* Collaborators */
+.collaborators {
+  background-color: #e8dcc4;
+  padding: 4rem 2rem;
+}
+
+.collaborators-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.collaborator-card {
+  background-color: #f5f5dc;
+  padding: 2rem;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.collaborator-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.collab-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.collaborator-card h3 {
+  color: #2d5016;
+  margin-bottom: 0.5rem;
+  font-size: 1.1rem;
+}
+
+.collab-institution {
+  color: #6b8e23;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.collab-area {
+  color: #5a3d2a;
+  font-size: 0.85rem;
+  font-style: italic;
+}
+
+/* Section Title - Common */
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary-green);
+}
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .banner-content h1 {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .team-grid,
+  .collaborators-grid,
+  .objectives-grid {
+    grid-template-columns: 1fr;
+  }
+}
