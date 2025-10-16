@@ -10,35 +10,39 @@
      COLORES PRINCIPALES - MODIFICA AQUÍ
      ======================================== */
   
-  /* Verdes */
-  --primary-green: #3d6b1f;
-  --secondary-green: #557a2e;
-  --accent-green: #7d9f4c;
-  --dark-green: #2d5016;
+  /* Verdes - Basados en el logo #7FB601 */
+  --primary-green: #7FB601;        /* Verde del logo */
+  --secondary-green: #6A9B01;      /* Verde más oscuro */
+  --accent-green: #9FD135;         /* Verde claro brillante */
+  --dark-green: #568001;           /* Verde oscuro profundo */
+  --light-green: #B8E356;          /* Verde muy claro */
   
-  /* Beige/Crema */
-  --beige-light: #faf8f3;
-  --beige-medium: #f0ebe3;
-  --beige-dark: #d4c5a9;
+  /* Beige/Crema - Tonos cálidos y naturales */
+  --beige-light: #FAF7F0;          /* Beige muy claro */
+  --beige-medium: #F5F0E8;         /* Beige claro */
+  --beige-warm: #E8DCC8;           /* Beige cálido */
+  --beige-dark: #D4C5A9;           /* Beige oscuro */
   
-  /* Cafés */
-  --brown-dark: #5a3d2a;
-  --brown-medium: #7a5940;
-  --brown-light: #a68a6d;
+  /* Complementarios - Tonos tierra */
+  --brown-dark: #5C4A3A;           /* Café oscuro */
+  --brown-medium: #8B7355;         /* Café medio */
+  --ochre: #D9A441;                /* Ocre dorado */
   
   /* Textos */
-  --text-dark: #333333;
-  --text-light: #666666;
-  --text-muted: #999999;
+  --text-dark: #2C3E1F;            /* Verde muy oscuro para texto */
+  --text-medium: #4A5C3D;          /* Verde medio para texto */
+  --text-light: #6B7B5E;           /* Verde claro para texto */
+  --text-muted: #9AA88F;           /* Verde apagado */
   
   /* Fondos */
-  --bg-white: #ffffff;
-  --bg-light: #faf8f3;
-  --bg-medium: #f8f8f8;
+  --bg-white: #FFFFFF;
+  --bg-light: #FAF7F0;
+  --bg-medium: #F5F0E8;
+  --bg-accent: #F9FDF3;            /* Fondo con tinte verde muy suave */
   
   /* Bordes */
-  --border-color: #e0e0e0;
-  --border-color-dark: #cccccc;
+  --border-color: #E0DDD5;
+  --border-color-dark: #C8C0B0;
   
   /* ========================================
      TAMAÑOS Y ESPACIADO

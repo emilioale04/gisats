@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paleta 2: Natural y Académica - GISATS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #F5F1E8;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #2C3E2C;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #5A6B5A;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .description {
+            background: linear-gradient(135deg, #F5F1E8 0%, #F8F6F0 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #7FB601;
+            margin-bottom: 3rem;
+        }
+
+        .description p {
+            color: #2C3E2C;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            color: #5A8500;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #7FB601;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .color-card {
+            border: 2px solid #DDD6C8;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(127, 182, 1, 0.2);
+            border-color: #7FB601;
+        }
+
+        .color-preview {
+            height: 100px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 1rem;
+            background: #F5F1E8;
+        }
+
+        .color-name {
+            font-weight: 600;
+            color: #2C3E2C;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            color: #7FB601;
+            font-size: 0.9rem;
+        }
+
+        .color-description {
+            font-size: 0.85rem;
+            color: #5A6B5A;
+            margin-top: 0.5rem;
+        }
+
+        .gradient-preview {
+            height: 150px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 2px solid #DDD6C8;
+        }
+
+        .usage-example {
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #F5F1E8 0%, #F8F6F0 100%);
+            border: 2px solid #7FB601;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #7FB601;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid #DDD6C8;
+            border-radius: 8px;
+            border-left: 4px solid #8B6F47;
+        }
+
+        .feature-card h3 {
+            color: #5A8500;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #5A6B5A;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌱 Paleta 2: Natural y Académica</h1>
+        <p class="subtitle">Inspirada en sistemas alimentarios sostenibles y naturaleza</p>
+
+        <div class="description">
+            <p><strong>Características:</strong> Esta paleta combina los verdes naturales con tonos tierra cálidos, creando una atmósfera académica y profesional perfecta para investigación en agricultura y sostenibilidad.</p>
+            <p><strong>Ideal para:</strong> Instituciones académicas, investigación agrícola, proyectos de sostenibilidad alimentaria.</p>
+        </div>
+
+        <!-- Verdes -->
+        <div class="section">
+            <h2>Verdes del Logo</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #7FB601;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Green</div>
+                        <div class="color-hex">#7FB601</div>
+                        <div class="color-description">Color principal del logo</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #5A8500;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Oscuro</div>
+                        <div class="color-hex">#5A8500</div>
+                        <div class="color-description">Títulos y énfasis</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #9FD135;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Accent Green</div>
+                        <div class="color-hex">#9FD135</div>
+                        <div class="color-description">Acentos brillantes</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #4A6F00;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Dark Green</div>
+                        <div class="color-hex">#4A6F00</div>
+                        <div class="color-description">Verde muy oscuro</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #A8C97F;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Green</div>
+                        <div class="color-hex">#A8C97F</div>
+                        <div class="color-description">Verde suave</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tonos Tierra -->
+        <div class="section">
+            <h2>Tonos Tierra y Beige</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #F5F1E8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Beige Claro</div>
+                        <div class="color-hex">#F5F1E8</div>
+                        <div class="color-description">Fondos suaves</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #EDE7DB;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Beige Medium</div>
+                        <div class="color-hex">#EDE7DB</div>
+                        <div class="color-description">Beige medio</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #8B6F47;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Tierra</div>
+                        <div class="color-hex">#8B6F47</div>
+                        <div class="color-description">Acentos cálidos</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #D4C9B8;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Beige Dark</div>
+                        <div class="color-hex">#D4C9B8</div>
+                        <div class="color-description">Beige oscuro</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Textos -->
+        <div class="section">
+            <h2>Colores de Texto</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #2C3E2C;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Carbón</div>
+                        <div class="color-hex">#2C3E2C</div>
+                        <div class="color-description">Textos principales</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #5A6B5A;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Light</div>
+                        <div class="color-hex">#5A6B5A</div>
+                        <div class="color-description">Textos secundarios</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #7A8A7A;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Muted</div>
+                        <div class="color-hex">#7A8A7A</div>
+                        <div class="color-description">Texto apagado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gradientes -->
+        <div class="section">
+            <h2>Gradientes de la Paleta</h2>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #F5F1E8 0%, #F8F6F0 50%, #EDE7DB 100%);"></div>
+            <p style="text-align: center; color: #5A6B5A; margin-bottom: 1.5rem;">Gradiente Hero Section</p>
+            
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #FFFFFF 0%, #F5F1E8 100%);"></div>
+            <p style="text-align: center; color: #5A6B5A; margin-bottom: 1.5rem;">Gradiente Tarjetas</p>
+        </div>
+
+        <!-- Ejemplo de uso -->
+        <div class="section">
+            <h2>Ejemplo de Aplicación</h2>
+            <div class="usage-example">
+                <span class="badge">🌱 Natural & Académica</span>
+                <h3 style="color: #5A8500; margin-bottom: 1rem;">Investigación en Sistemas Alimentarios Sostenibles</h3>
+                <p style="color: #2C3E2C; line-height: 1.7; margin-bottom: 1rem;">
+                    Esta paleta transmite profesionalismo académico con una conexión clara a la naturaleza y agricultura sostenible. Los tonos tierra complementan perfectamente el verde del logo.
+                </p>
+                <p style="color: #5A6B5A; line-height: 1.7;">
+                    Ideal para presentar investigaciones, publicaciones científicas y proyectos relacionados con agricultura, alimentación y desarrollo sostenible.
+                </p>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>✓ Académica</h3>
+                    <p>Tonos sobrios y profesionales perfectos para instituciones de investigación</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Natural</h3>
+                    <p>Colores tierra y verdes que evocan agricultura y naturaleza</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Cálida</h3>
+                    <p>Los acentos tierra añaden calidez sin perder seriedad</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

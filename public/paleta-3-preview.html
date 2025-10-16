@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paleta 3: Moderna y Sustentable - GISATS</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: #F8F9FA;
+            padding: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 3rem;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #212529;
+            margin-bottom: 1rem;
+            font-size: 2.5rem;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: #6C757D;
+            margin-bottom: 3rem;
+            font-size: 1.1rem;
+        }
+
+        .description {
+            background: linear-gradient(135deg, #F8F9FA 0%, #F0FDF4 100%);
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #7FB601;
+            margin-bottom: 3rem;
+        }
+
+        .description p {
+            color: #212529;
+            line-height: 1.7;
+            margin-bottom: 0.5rem;
+        }
+
+        .section {
+            margin-bottom: 3rem;
+        }
+
+        .section h2 {
+            color: #7FB601;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 3px solid #4A9B8E;
+        }
+
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+
+        .color-card {
+            border: 2px solid #DEE2E6;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 12px rgba(74, 155, 142, 0.3);
+            border-color: #4A9B8E;
+        }
+
+        .color-preview {
+            height: 100px;
+            width: 100%;
+        }
+
+        .color-info {
+            padding: 1rem;
+            background: #F8F9FA;
+        }
+
+        .color-name {
+            font-weight: 600;
+            color: #212529;
+            margin-bottom: 0.5rem;
+        }
+
+        .color-hex {
+            font-family: 'Courier New', monospace;
+            color: #7FB601;
+            font-size: 0.9rem;
+        }
+
+        .color-description {
+            font-size: 0.85rem;
+            color: #6C757D;
+            margin-top: 0.5rem;
+        }
+
+        .gradient-preview {
+            height: 150px;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border: 2px solid #DEE2E6;
+        }
+
+        .usage-example {
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #F8F9FA 0%, #F0FDF4 100%);
+            border: 2px solid #4A9B8E;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #7FB601;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+
+        .badge.warning {
+            background: #E8C547;
+            color: #212529;
+        }
+
+        .badge.info {
+            background: #4A9B8E;
+            color: white;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 1.5rem;
+            border: 2px solid #DEE2E6;
+            border-radius: 8px;
+            border-left: 4px solid #4A9B8E;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-left-color: #E8C547;
+            transform: translateX(3px);
+        }
+
+        .feature-card h3 {
+            color: #7FB601;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-card p {
+            color: #6C757D;
+            line-height: 1.6;
+        }
+
+        .tech-badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            background: #F1F3F5;
+            color: #495057;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            margin: 0.25rem;
+            border: 1px solid #DEE2E6;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🌿 Paleta 3: Moderna y Sustentable</h1>
+        <p class="subtitle">Fresca, tecnológica y con enfoque en sostenibilidad</p>
+
+        <div class="description">
+            <p><strong>Características:</strong> Paleta vibrante y contemporánea que combina verdes con grises modernos y amarillo para destacados. Perfecta para audiencias jóvenes y proyectos innovadores.</p>
+            <p><strong>Ideal para:</strong> Startups AgTech, innovación científica, plataformas digitales, proyectos de tecnología sustentable.</p>
+        </div>
+
+        <!-- Verdes -->
+        <div class="section">
+            <h2>Verdes y Acentos</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #7FB601;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Primary Green</div>
+                        <div class="color-hex">#7FB601</div>
+                        <div class="color-description">Color principal del logo</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #4A9B8E;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Verde Agua</div>
+                        <div class="color-hex">#4A9B8E</div>
+                        <div class="color-description">Botones secundarios, enlaces</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #E8C547;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Amarillo Suave</div>
+                        <div class="color-hex">#E8C547</div>
+                        <div class="color-description">Alertas, destacados</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #9FD135;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Light Green</div>
+                        <div class="color-hex">#9FD135</div>
+                        <div class="color-description">Verde brillante</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Grises Modernos -->
+        <div class="section">
+            <h2>Grises Modernos</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #F8F9FA;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Claro</div>
+                        <div class="color-hex">#F8F9FA</div>
+                        <div class="color-description">Fondos de secciones</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #F1F3F5;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Muy Claro</div>
+                        <div class="color-hex">#F1F3F5</div>
+                        <div class="color-description">Fondos alternativos</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #DEE2E6;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Border</div>
+                        <div class="color-hex">#DEE2E6</div>
+                        <div class="color-description">Bordes</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Textos -->
+        <div class="section">
+            <h2>Colores de Texto</h2>
+            <div class="color-grid">
+                <div class="color-card">
+                    <div class="color-preview" style="background: #212529;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Negro Suave</div>
+                        <div class="color-hex">#212529</div>
+                        <div class="color-description">Textos principales</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #6C757D;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Gris Medio</div>
+                        <div class="color-hex">#6C757D</div>
+                        <div class="color-description">Textos secundarios</div>
+                    </div>
+                </div>
+                <div class="color-card">
+                    <div class="color-preview" style="background: #ADB5BD;"></div>
+                    <div class="color-info">
+                        <div class="color-name">Text Muted</div>
+                        <div class="color-hex">#ADB5BD</div>
+                        <div class="color-description">Texto apagado</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Gradientes -->
+        <div class="section">
+            <h2>Gradientes de la Paleta</h2>
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #F8F9FA 0%, #F0FDF4 50%, #F1F3F5 100%);"></div>
+            <p style="text-align: center; color: #6C757D; margin-bottom: 1.5rem;">Gradiente Hero Section</p>
+            
+            <div class="gradient-preview" style="background: linear-gradient(135deg, #FFFFFF 0%, #F8F9FA 100%);"></div>
+            <p style="text-align: center; color: #6C757D; margin-bottom: 1.5rem;">Gradiente Tarjetas</p>
+            
+            <div class="gradient-preview" style="background: linear-gradient(90deg, #7FB601 0%, #4A9B8E 100%);"></div>
+            <p style="text-align: center; color: #6C757D;">Gradiente de Acento</p>
+        </div>
+
+        <!-- Ejemplo de uso -->
+        <div class="section">
+            <h2>Ejemplo de Aplicación</h2>
+            <div class="usage-example">
+                <span class="badge">🌿 Moderna</span>
+                <span class="badge info">Sustentable</span>
+                <span class="badge warning">⚡ Innovadora</span>
+                <h3 style="color: #7FB601; margin: 1rem 0;">Innovación AgTech y Sostenibilidad Digital</h3>
+                <p style="color: #212529; line-height: 1.7; margin-bottom: 1rem;">
+                    Esta paleta está diseñada para proyectos tecnológicos y plataformas digitales. Combina la frescura de los grises modernos con verdes vibrantes y toques de amarillo para crear una experiencia visual contemporánea.
+                </p>
+                <p style="color: #6C757D; line-height: 1.7; margin-bottom: 1rem;">
+                    Los colores transmiten innovación, tecnología y sostenibilidad. Perfecta para captar la atención de audiencias jóvenes y profesionales del sector tech.
+                </p>
+                <div>
+                    <span class="tech-badge">🚀 Innovación</span>
+                    <span class="tech-badge">💻 Digital</span>
+                    <span class="tech-badge">🌱 Sustentable</span>
+                    <span class="tech-badge">⚡ Rápida</span>
+                    <span class="tech-badge">🎯 Precisa</span>
+                </div>
+            </div>
+
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <h3>✓ Vibrante</h3>
+                    <p>Colores frescos que captan la atención sin ser estridentes</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Tecnológica</h3>
+                    <p>Grises modernos perfectos para interfaces digitales</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Accesible</h3>
+                    <p>Alto contraste y legibilidad en todos los dispositivos</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✓ Versátil</h3>
+                    <p>Funciona tanto en web como en aplicaciones móviles</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
