@@ -4,15 +4,55 @@
 
 /* Hero Section */
 .hero {
+  position: relative;
   background: linear-gradient(135deg, var(--beige-light) 0%, var(--bg-accent) 50%, var(--beige-medium) 100%);
   border-bottom: 2px solid var(--accent-green);
-  padding: 4rem 2rem;
+  padding: 0;
   text-align: center;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.hero-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.hero-banner-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  z-index: 2;
 }
 
 .hero-content {
+  position: relative;
+  z-index: 3;
   max-width: 800px;
   margin: 0 auto;
+  padding: 4rem 2rem;
 }
 
 .hero h1 {
@@ -20,21 +60,24 @@
   margin-bottom: 0.75rem;
   font-weight: 600;
   letter-spacing: 0;
-  color: var(--secondary-green);
+  color: var(--bg-white);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
 
 .hero h2 {
   font-size: 1.25rem;
   margin-bottom: 1.5rem;
   font-weight: 400;
-  color: var(--text-light);
+  color: var(--bg-white);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
 .hero-description {
   font-size: 1rem;
   line-height: 1.7;
   margin-bottom: 2rem;
-  color: var(--text-light);
+  color: var(--bg-white);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 .hero-buttons {
@@ -296,16 +339,33 @@
 }
 
 @media (max-width: 768px) {
+  .hero {
+    min-height: 400px;
+  }
+
+  .hero-content {
+    padding: 3rem 1.5rem;
+  }
+
   .hero h1 {
-    font-size: 2.5rem;
+    font-size: 1.8rem;
   }
   
   .hero h2 {
-    font-size: 1.2rem;
+    font-size: 1.1rem;
   }
   
   .hero-description {
-    font-size: 1rem;
+    font-size: 0.95rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
   }
   
   .section-title {

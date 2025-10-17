@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
+import banner from '../assets/banner.jpg';
 import noticia1 from '../assets/noticia_1.jpg';
 import noticia2 from '../assets/noticia_2.jpg';
 import noticia3 from '../assets/noticia_3.jpg';
@@ -46,6 +47,10 @@ function Home() {
     <div className="home">
       {/* Hero Section */}
       <section className="hero">
+        <div className="hero-banner">
+          <img src={banner} alt="Banner GISATs" className="hero-banner-image" />
+          <div className="hero-overlay"></div>
+        </div>
         <div className="hero-content">
           {/* <h1>GISATs</h1> */}
           <h1>Gestión Integrada de Sistemas Alimentarios, Transiciones y Sustentabilidad</h1>
