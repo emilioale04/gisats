@@ -3,7 +3,6 @@ import './Publications.css';
 
 function Publications() {
   const [filterYear, setFilterYear] = useState('all');
-  const [filterType, setFilterType] = useState('all');
   const [expandedId, setExpandedId] = useState(null);
 
   const publications = [
@@ -13,10 +12,9 @@ function Publications() {
       authors: 'González, M., Ramírez, C., López, A.',
       journal: 'Revista Latinoamericana de Sistemas Alimentarios',
       year: 2025,
-      type: 'Artículo',
       area: 'Agroecología',
       doi: '10.1234/rlsa.2025.001',
-      abstract: 'Este estudio examina los procesos de transición agroecológica en tres comunidades rurales de México, identificando factores clave que facilitan u obstaculizan estos procesos. Los resultados muestran que el apoyo institucional y las redes sociales son determinantes críticos del éxito.'
+      abstract: 'Este estudio examina los procesos de transición agroecológica en tres comunidades rurales de Ecuador, identificando factores clave que facilitan u obstaculizan estos procesos. Los resultados muestran que el apoyo institucional y las redes sociales son determinantes críticos del éxito.'
     },
     {
       id: 2,
@@ -24,10 +22,9 @@ function Publications() {
       authors: 'López, A., Martínez, J., González, M.',
       journal: 'Environmental Research Letters',
       year: 2025,
-      type: 'Artículo',
       area: 'Seguridad Alimentaria',
       doi: '10.1234/erl.2025.045',
-      abstract: 'Analizamos la vulnerabilidad de los sistemas alimentarios urbanos frente al cambio climático en cinco ciudades latinoamericanas. Proponemos un marco de adaptación basado en la diversificación de fuentes de abastecimiento y el fortalecimiento de redes locales.'
+      abstract: 'Analizamos la vulnerabilidad de los sistemas alimentarios urbanos frente al cambio climático en cinco ciudades ecuatorianas. Proponemos un marco de adaptación basado en la diversificación de fuentes de abastecimiento y el fortalecimiento de redes locales.'
     },
     {
       id: 3,
@@ -35,10 +32,9 @@ function Publications() {
       authors: 'Martínez, J., Ramírez, C.',
       journal: 'Food Policy',
       year: 2024,
-      type: 'Artículo',
       area: 'Políticas Públicas',
       doi: '10.1234/fp.2024.123',
-      abstract: 'Evaluamos políticas públicas orientadas a promover sistemas alimentarios sustentables en seis países de América Latina. Identificamos mejores prácticas y desafíos comunes en la implementación de estas políticas.'
+      abstract: 'Evaluamos políticas públicas orientadas a promover sistemas alimentarios sustentables en seis países de la región. Identificamos mejores prácticas y desafíos comunes en la implementación de estas políticas.'
     },
     {
       id: 4,
@@ -46,7 +42,6 @@ function Publications() {
       authors: 'González, M., López, A., Ramírez, C., Martínez, J.',
       journal: 'Sustainability Science',
       year: 2024,
-      type: 'Revisión',
       area: 'Sustentabilidad',
       doi: '10.1234/ss.2024.089',
       abstract: 'Presentamos un marco conceptual integrador para analizar la sustentabilidad de sistemas alimentarios, considerando dimensiones ambientales, sociales y económicas. El marco es validado mediante estudios de caso en contextos diversos.'
@@ -57,21 +52,19 @@ function Publications() {
       authors: 'Ramírez, C., López, A.',
       journal: 'Urban Agriculture Magazine',
       year: 2023,
-      type: 'Artículo',
       area: 'Agricultura Urbana',
       doi: '10.1234/uam.2023.067',
       abstract: 'Evaluamos el potencial de la agricultura urbana y periurbana para contribuir a la seguridad alimentaria en ciudades medianas. Los resultados indican que estas prácticas pueden complementar significativamente el abastecimiento alimentario urbano.'
     },
     {
       id: 6,
-      title: 'Redes alimentarias alternativas en México: características y desafíos',
+      title: 'Redes alimentarias alternativas en Ecuador: características y desafíos',
       authors: 'González, M., Martínez, J.',
       journal: 'Agriculture and Human Values',
       year: 2023,
-      type: 'Artículo',
       area: 'Sistemas Alimentarios',
       doi: '10.1234/ahv.2023.145',
-      abstract: 'Caracterizamos las redes alimentarias alternativas en México, identificando sus principales modalidades organizativas, desafíos y oportunidades. Discutimos su potencial para transformar los sistemas alimentarios convencionales.'
+      abstract: 'Caracterizamos las redes alimentarias alternativas en Ecuador, identificando sus principales modalidades organizativas, desafíos y oportunidades. Discutimos su potencial para transformar los sistemas alimentarios convencionales.'
     }
   ];
 
@@ -81,12 +74,9 @@ function Publications() {
     return b - a;
   });
 
-  const types = ['all', ...new Set(publications.map(p => p.type))];
-
   const filteredPublications = publications.filter(pub => {
     const yearMatch = filterYear === 'all' || pub.year === parseInt(filterYear);
-    const typeMatch = filterType === 'all' || pub.type === filterType;
-    return yearMatch && typeMatch;
+    return yearMatch;
   });
 
   const toggleAbstract = (id) => {
@@ -122,26 +112,10 @@ function Publications() {
                 ))}
               </select>
             </div>
-            
-            <div className="filter-group">
-              <label htmlFor="type-filter">Tipo:</label>
-              <select 
-                id="type-filter"
-                value={filterType} 
-                onChange={(e) => setFilterType(e.target.value)}
-                className="filter-select"
-              >
-                {types.map(type => (
-                  <option key={type} value={type}>
-                    {type === 'all' ? 'Todos' : type}
-                  </option>
-                ))}
-              </select>
-            </div>
           </div>
           
           <div className="results-count">
-            Mostrando {filteredPublications.length} publicación{filteredPublications.length !== 1 ? 'es' : ''}
+            Mostrando {filteredPublications.length} publicacion{filteredPublications.length !== 1 ? 'es' : ''}
           </div>
         </div>
       </section>
@@ -154,7 +128,7 @@ function Publications() {
               <div className="pub-header">
                 <div className="pub-meta">
                   <span className="pub-year">{pub.year}</span>
-                  <span className="pub-type">{pub.type}</span>
+                  {/* <span className="pub-type">{pub.type}</span> */}
                   <span className="pub-area">{pub.area}</span>
                 </div>
               </div>

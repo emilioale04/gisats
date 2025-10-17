@@ -10,39 +10,43 @@
      COLORES PRINCIPALES - MODIFICA AQUÍ
      ======================================== */
   
+/* ========================================
+     COLORES PRINCIPALES
+     ======================================== */
+  
   /* Verdes - Basados en el logo #7FB601 */
   --primary-green: #7FB601;        /* Verde del logo */
-  --secondary-green: #6A9B01;      /* Verde más oscuro */
+  --secondary-green: #5A8500;      /* Verde oscuro para títulos */
   --accent-green: #9FD135;         /* Verde claro brillante */
-  --dark-green: #568001;           /* Verde oscuro profundo */
-  --light-green: #B8E356;          /* Verde muy claro */
+  --dark-green: #4A6F00;           /* Verde muy oscuro */
+  --light-green: #A8C97F;          /* Verde suave */
   
-  /* Beige/Crema - Tonos cálidos y naturales */
-  --beige-light: #FAF7F0;          /* Beige muy claro */
-  --beige-medium: #F5F0E8;         /* Beige claro */
-  --beige-warm: #E8DCC8;           /* Beige cálido */
-  --beige-dark: #D4C5A9;           /* Beige oscuro */
+  /* Tonos Tierra - Acentos cálidos */
+  --beige-light: #F5F1E8;          /* Beige claro para fondos */
+  --beige-medium: #EDE7DB;         /* Beige medio */
+  --beige-warm: #E5DDD0;           /* Beige cálido */
+  --beige-dark: #D4C9B8;           /* Beige oscuro */
   
-  /* Complementarios - Tonos tierra */
-  --brown-dark: #5C4A3A;           /* Café oscuro */
-  --brown-medium: #8B7355;         /* Café medio */
-  --ochre: #D9A441;                /* Ocre dorado */
+  /* Tierra y Complementarios */
+  --brown-dark: #6B5436;           /* Café oscuro */
+  --brown-medium: #8B6F47;         /* Tierra (acentos cálidos) */
+  --ochre: #A68357;                /* Ocre tierra */
   
   /* Textos */
-  --text-dark: #2C3E1F;            /* Verde muy oscuro para texto */
-  --text-medium: #4A5C3D;          /* Verde medio para texto */
-  --text-light: #6B7B5E;           /* Verde claro para texto */
-  --text-muted: #9AA88F;           /* Verde apagado */
+  --text-dark: #2C3E2C;            /* Gris carbón verde para texto principal */
+  --text-medium: #3D4F3D;          /* Verde medio para texto */
+  --text-light: #5A6B5A;           /* Verde gris para texto secundario */
+  --text-muted: #7A8A7A;           /* Verde apagado */
   
   /* Fondos */
   --bg-white: #FFFFFF;
-  --bg-light: #FAF7F0;
-  --bg-medium: #F5F0E8;
-  --bg-accent: #F9FDF3;            /* Fondo con tinte verde muy suave */
+  --bg-light: #F5F1E8;
+  --bg-medium: #EDE7DB;
+  --bg-accent: #F8F6F0;            /* Fondo con tinte beige muy suave */
   
   /* Bordes */
-  --border-color: #E0DDD5;
-  --border-color-dark: #C8C0B0;
+  --border-color: #DDD6C8;
+  --border-color-dark: #C8BDAA;
   
   /* ========================================
      TAMAÑOS Y ESPACIADO

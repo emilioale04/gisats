@@ -1,0 +1,348 @@
+.member-detail {
+  min-height: 100vh;
+}
+
+/* Banner */
+.member-banner {
+  background: linear-gradient(135deg, var(--beige-light) 0%, var(--bg-accent) 50%, var(--beige-medium) 100%);
+  border-bottom: 2px solid var(--accent-green);
+  padding: 3rem 2rem;
+  position: relative;
+}
+
+.back-link {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  color: var(--primary-green);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: color 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.back-link:hover {
+  opacity: 0.8;
+}
+
+/* Member Profile */
+.member-profile {
+  background-color: var(--bg-white);
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.profile-header {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+
+.profile-photo {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border-radius: 10px;
+  border: 3px solid var(--border-color);
+  box-shadow: var(--shadow-md);
+}
+
+.profile-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.profile-info h1 {
+  font-size: 2.5rem;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.profile-role {
+  font-size: 1.25rem;
+  color: var(--primary-green);
+  font-weight: 500;
+  margin-bottom: 2rem;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: var(--text-light);
+}
+
+.contact-icon {
+  font-size: 1.25rem;
+}
+
+.contact-item a {
+  color: var(--primary-green);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+  color: var(--secondary-green);
+  text-decoration: underline;
+}
+
+.social-links {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: var(--bg-white);
+  color: var(--primary-green);
+  text-decoration: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: 2px solid var(--primary-green);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-link:hover {
+  background-color: var(--primary-green);
+  color: var(--bg-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon {
+  font-size: 1.1rem;
+}
+
+/* Biography */
+.biography {
+  background: linear-gradient(to bottom, var(--beige-light), var(--beige-medium));
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.biography-content {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.biography-content p {
+  color: var(--text-dark);
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.biography-content p:last-child {
+  margin-bottom: 0;
+}
+
+/* Education */
+.education {
+  background-color: var(--bg-white);
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.education-item {
+  display: flex;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: linear-gradient(135deg, var(--beige-light) 0%, var(--beige-medium) 100%);
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  border-left: 4px solid var(--primary-green);
+  transition: all 0.3s ease;
+}
+
+.education-item:hover {
+  box-shadow: var(--shadow-md);
+  border-left-color: var(--accent-green);
+  transform: translateX(3px);
+}
+
+.edu-icon {
+  font-size: 2.5rem;
+  flex-shrink: 0;
+}
+
+.edu-content h3 {
+  color: var(--text-dark);
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.edu-institution {
+  color: var(--primary-green);
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+  font-size: 0.95rem;
+}
+
+.edu-year {
+  color: var(--text-light);
+  font-size: 0.9rem;
+}
+
+/* Research Areas */
+.research-areas {
+  background: linear-gradient(to bottom, var(--beige-light), var(--beige-medium));
+  padding: 4rem 2rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.areas-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.area-tag {
+  padding: 0.75rem 1.5rem;
+  background-color: var(--bg-white);
+  border: 2px solid var(--border-color);
+  border-radius: 25px;
+  color: var(--text-dark);
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.area-tag:hover {
+  background-color: var(--primary-green);
+  color: var(--bg-white);
+  border-color: var(--primary-green);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+/* Common Styles */
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+  font-weight: 600;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background: var(--primary-green);
+}
+
+.text-center {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.btn {
+  padding: 0.65rem 1.5rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.2s ease;
+  display: inline-block;
+  border: 1px solid;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary-green);
+  border-color: var(--primary-green);
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-green);
+  color: var(--bg-white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .profile-header {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-photo {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .profile-info h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .profile-role {
+    text-align: center;
+  }
+
+  .contact-info {
+    align-items: center;
+  }
+
+  .social-links {
+    justify-content: center;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+
+  .education-item,
+  .publication-item {
+    flex-direction: column;
+  }
+
+  .areas-grid {
+    justify-content: flex-start;
+  }
+}

@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './News.css';
 
 function News() {
@@ -13,8 +14,8 @@ function News() {
       date: '5 Oct 2025',
       category: 'Investigación',
       image: '🌱',
-      summary: 'Publicamos hallazgos importantes sobre la transición hacia sistemas alimentarios más sustentables en zonas urbanas. El estudio abarca cinco ciudades latinoamericanas y propone estrategias innovadoras de adaptación.',
-      content: 'Nuestro equipo ha completado un estudio de tres años sobre sistemas alimentarios urbanos en América Latina...'
+      summary: 'Publicamos hallazgos importantes sobre la transición hacia sistemas alimentarios más sustentables en zonas urbanas. El estudio abarca cinco ciudades ecuatorianas y propone estrategias innovadoras de adaptación.',
+      content: 'Nuestro equipo ha completado un estudio de tres años sobre sistemas alimentarios urbanos en Ecuador...'
     },
     {
       id: 2,
@@ -31,7 +32,7 @@ function News() {
       date: '15 Sep 2025',
       category: 'Eventos',
       image: '🎓',
-      summary: 'Participamos como ponentes principales en la conferencia internacional sobre sistemas alimentarios celebrada en Buenos Aires.',
+      summary: 'Participamos como ponentes principales en la conferencia internacional sobre sistemas alimentarios celebrada en Quito.',
       content: 'La Dra. González presentó los resultados más recientes de nuestra investigación sobre transiciones agroecológicas...'
     },
     {
@@ -47,16 +48,16 @@ function News() {
       id: 5,
       title: 'Taller con pequeños productores',
       date: '20 Ago 2025',
-      category: 'Extensión',
+      category: 'Eventos',
       image: '🌾',
-      summary: 'Realizamos un taller sobre prácticas agroecológicas con 50 productores de comunidades rurales de Oaxaca.',
+      summary: 'Realizamos un taller sobre prácticas agroecológicas con 50 productores de comunidades rurales de Manabí.',
       content: 'Durante tres días, compartimos conocimientos sobre técnicas de producción sustentable y gestión de recursos naturales...'
     },
     {
       id: 6,
       title: 'Nuevo proyecto financiado',
       date: '10 Ago 2025',
-      category: 'Financiamiento',
+      category: 'Investigación',
       image: '💰',
       summary: 'Obtuvimos financiamiento para un proyecto de tres años sobre adaptación climática en sistemas alimentarios.',
       content: 'El Fondo para el Medio Ambiente aprobó nuestro proyecto de investigación sobre estrategias de adaptación...'
@@ -65,7 +66,7 @@ function News() {
       id: 7,
       title: 'Estudiante recibe premio nacional',
       date: '5 Ago 2025',
-      category: 'Reconocimientos',
+      category: 'Colaboración',
       image: '🏆',
       summary: 'Una estudiante de nuestro grupo recibió el premio a la mejor tesis de maestría en agricultura sustentable.',
       content: 'María Rodríguez fue reconocida por su investigación sobre redes alimentarias alternativas en zonas periurbanas...'
@@ -83,7 +84,7 @@ function News() {
       id: 9,
       title: 'Curso de verano sobre agroecología',
       date: '15 Jul 2025',
-      category: 'Docencia',
+      category: 'Eventos',
       image: '📖',
       summary: 'Impartimos un curso intensivo de verano sobre principios y prácticas agroecológicas a 30 estudiantes.',
       content: 'El curso combinó sesiones teóricas con visitas de campo a sistemas de producción agroecológicos...'
@@ -146,12 +147,12 @@ function News() {
                 <div className="news-image">{item.image}</div>
                 <div className="news-content">
                   <div className="news-meta">
-                    <span className="news-date">{item.date}</span>
                     <span className="news-category">{item.category}</span>
+                    <span className="news-date">{item.date}</span>
                   </div>
                   <h2>{item.title}</h2>
                   <p>{item.summary}</p>
-                  <button className="read-more-btn">Leer más →</button>
+                  <Link to={`/noticias/${item.id}`} className="read-more-btn">Leer más →</Link>
                 </div>
               </article>
             ))}

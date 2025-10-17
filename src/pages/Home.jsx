@@ -1,5 +1,8 @@
 import { Link } from 'react-router-dom';
 import './Home.css';
+import noticia1 from '../assets/noticia_1.jpg';
+import noticia2 from '../assets/noticia_2.jpg';
+import noticia3 from '../assets/noticia_3.jpg';
 
 function Home() {
   const news = [
@@ -8,38 +11,35 @@ function Home() {
       title: 'Nueva investigación sobre sistemas alimentarios urbanos',
       date: '5 Oct 2025',
       summary: 'Publicamos hallazgos importantes sobre la transición hacia sistemas alimentarios más sustentables en zonas urbanas.',
-      image: '🌱'
+      image: noticia1
     },
     {
       id: 2,
       title: 'Convenio con institución internacional',
       date: '28 Sep 2025',
-      summary: 'Firmamos un acuerdo de colaboración con la Universidad de Agricultura Sustentable de Europa.',
-      image: '🤝'
+      summary: 'Firmamos un acuerdo de colaboración con instituciones de investigación internacionales.',
+      image: noticia2
     },
     {
       id: 3,
       title: 'Conferencia anual de sistemas alimentarios',
       date: '15 Sep 2025',
       summary: 'Participamos como ponentes principales en la conferencia internacional sobre sistemas alimentarios.',
-      image: '🎓'
+      image: noticia3
     }
   ];
 
   const stats = [
-    { number: '15+', label: 'Proyectos Activos' },
-    { number: '50+', label: 'Publicaciones' },
-    { number: '20+', label: 'Colaboradores' },
+    { number: '10+', label: 'Proyectos' },
+    { number: '10+', label: 'Publicaciones' },
+    { number: '10+', label: 'Colaboradores' },
     { number: '10+', label: 'Instituciones Aliadas' }
   ];
 
   const partners = [
-    'Universidad Nacional', 
-    'Instituto de Agricultura', 
-    'Centro de Investigación Alimentaria',
-    'Fundación Sustentabilidad',
-    'Consejo Nacional de Ciencia',
-    'Red Latinoamericana'
+    'Escuela Politécnica Nacional', 
+    'Instituto Nacional de Investigaciones Agropecuarias', 
+    'Centro de Investigación en Sistemas Alimentarios',
   ];
 
   return (
@@ -47,8 +47,8 @@ function Home() {
       {/* Hero Section */}
       <section className="hero">
         <div className="hero-content">
-          <h1>GISATS</h1>
-          <h2>Gestión Integrada de Sistemas Alimentarios, Transiciones y Sustentabilidad</h2>
+          {/* <h1>GISATs</h1> */}
+          <h1>Gestión Integrada de Sistemas Alimentarios, Transiciones y Sustentabilidad</h1>
           <p className="hero-description">
             Investigamos e implementamos soluciones innovadoras para transformar los sistemas alimentarios 
             hacia modelos más sustentables, resilientes y equitativos. Nuestro trabajo contribuye al 
@@ -81,12 +81,14 @@ function Home() {
           <div className="news-grid">
             {news.map(item => (
               <div key={item.id} className="news-card">
-                <div className="news-icon">{item.image}</div>
+                <div className="news-icon">
+                  <img src={item.image} alt={item.title} />
+                </div>
                 <div className="news-content">
                   <p className="news-date">{item.date}</p>
                   <h3>{item.title}</h3>
                   <p>{item.summary}</p>
-                  <Link to="/noticias" className="read-more">Leer más →</Link>
+                  <Link to={`/noticias/${item.id}`} className="read-more">Leer más →</Link>
                 </div>
               </div>
             ))}

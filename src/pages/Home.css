@@ -6,7 +6,7 @@
 .hero {
   background: linear-gradient(135deg, var(--beige-light) 0%, var(--bg-accent) 50%, var(--beige-medium) 100%);
   border-bottom: 2px solid var(--accent-green);
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
   text-align: center;
 }
 
@@ -20,7 +20,7 @@
   margin-bottom: 0.75rem;
   font-weight: 600;
   letter-spacing: 0;
-  color: var(--primary-green);
+  color: var(--secondary-green);
 }
 
 .hero h2 {
@@ -57,14 +57,14 @@
 
 .btn-primary {
   background-color: var(--primary-green);
-  color: #ffffff;
+  color: var(--bg-white);
   border-color: var(--primary-green);
 }
 
 .btn-primary:hover {
   background-color: var(--secondary-green);
   border-color: var(--secondary-green);
-  color: #ffffff;
+  color: var(--bg-white);
 }
 
 .btn-secondary {
@@ -75,7 +75,7 @@
 
 .btn-secondary:hover {
   background-color: var(--primary-green);
-  color: #ffffff;
+  color: var(--bg-white);
 }
 
 .btn-outline {
@@ -86,14 +86,13 @@
 
 .btn-outline:hover {
   background-color: var(--primary-green);
-  color: #ffffff;
+  color: var(--bg-white);
 }
 
 /* Statistics Section */
 .stats {
-  background: linear-gradient(to bottom, var(--bg-accent), var(--beige-light));
-  padding: 2.5rem 2rem;
-  border-top: 2px solid var(--accent-green);
+  background-color: var(--bg-white);
+  padding: 4rem 2rem;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -108,14 +107,14 @@
 .stat-card {
   text-align: center;
   padding: 1.5rem;
-  background: linear-gradient(135deg, #ffffff 0%, var(--bg-light) 100%);
+  background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
   border: 2px solid var(--border-color);
   border-radius: 3px;
   transition: all 0.3s ease;
 }
 
 .stat-card:hover {
-  box-shadow: 0 4px 12px rgba(127, 182, 1, 0.15);
+  box-shadow: var(--shadow-md);
   border-color: var(--accent-green);
   transform: translateY(-2px);
 }
@@ -137,7 +136,7 @@
 .section-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 3rem 2rem;
+  padding: 4rem 2rem;
 }
 
 .section-title {
@@ -163,7 +162,9 @@
 
 /* Latest News Section */
 .latest-news {
-  background-color: #ffffff;
+  background: linear-gradient(to bottom, var(--beige-light), var(--beige-medium));
+  border-bottom: 1px solid var(--border-color);
+  padding: 4rem 2rem;
 }
 
 .news-grid {
@@ -174,7 +175,7 @@
 }
 
 .news-card {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   border: 2px solid var(--border-color);
   border-radius: 3px;
   overflow: hidden;
@@ -184,7 +185,7 @@
 }
 
 .news-card:hover {
-  box-shadow: 0 4px 12px rgba(127, 182, 1, 0.2);
+  box-shadow: var(--shadow-lg);
   border-color: var(--accent-green);
   transform: translateY(-3px);
 }
@@ -192,8 +193,20 @@
 .news-icon {
   font-size: 3.5rem;
   text-align: center;
-  padding: 2rem;
-  background: linear-gradient(135deg, var(--beige-light) 0%, var(--beige-medium) 100%);
+  padding: 0;
+  background: linear-gradient(135deg, var(--bg-white) 0%, var(--bg-light) 100%);
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.news-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 3px 3px 0 0;
 }
 
 .news-content {
@@ -246,8 +259,8 @@
 
 /* Partners Section */
 .partners {
-  background: linear-gradient(to bottom, var(--beige-light), var(--beige-medium));
-  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-white);
+  padding: 4rem 2rem;
 }
 
 .partners-grid {
@@ -257,7 +270,7 @@
 }
 
 .partner-card {
-  background-color: #ffffff;
+  background-color: var(--bg-white);
   padding: 1.5rem;
   border: 2px solid var(--border-color);
   border-radius: 3px;
@@ -266,7 +279,7 @@
 }
 
 .partner-card:hover {
-  box-shadow: 0 4px 10px rgba(127, 182, 1, 0.15);
+  box-shadow: var(--shadow-md);
   border-color: var(--accent-green);
   transform: translateY(-2px);
 }

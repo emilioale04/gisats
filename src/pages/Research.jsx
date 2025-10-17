@@ -1,8 +1,6 @@
-import { useState } from 'react';
 import './Research.css';
 
 function Research() {
-  const [showCompleted, setShowCompleted] = useState(false);
 
   const researchLines = [
     {
@@ -14,16 +12,6 @@ function Research() {
       title: 'Agroecología y Transiciones',
       description: 'Estudiamos los procesos de transición hacia sistemas agroecológicos y sus impactos en la sustentabilidad ambiental y social.',
       icon: '🌾'
-    },
-    {
-      title: 'Seguridad Alimentaria',
-      description: 'Analizamos las dimensiones de acceso, disponibilidad, uso y estabilidad alimentaria en diferentes contextos socioeconómicos.',
-      icon: '🍽️'
-    },
-    {
-      title: 'Políticas Públicas Alimentarias',
-      description: 'Evaluamos y diseñamos políticas públicas para promover sistemas alimentarios más justos y sustentables.',
-      icon: '📋'
     }
   ];
 
@@ -32,7 +20,7 @@ function Research() {
       title: 'Transición Agroecológica en Pequeños Productores',
       objective: 'Analizar los factores que facilitan u obstaculizan la adopción de prácticas agroecológicas en comunidades rurales.',
       duration: '2024-2026',
-      funding: 'Consejo Nacional de Ciencia y Tecnología',
+      funding: 'Secretaría de Educación Superior, Ciencia, Tecnología e Innovación',
       team: 'Dra. María González, Dr. Carlos Ramírez'
     },
     {
@@ -51,28 +39,13 @@ function Research() {
     }
   ];
 
-  const completedProjects = [
-    {
-      title: 'Redes Alimentarias Alternativas en México',
-      objective: 'Mapear y caracterizar las redes alimentarias alternativas en zonas urbanas del país.',
-      duration: '2020-2023',
-      results: '15 publicaciones, 3 tesis de posgrado, 2 políticas públicas influenciadas'
-    },
-    {
-      title: 'Evaluación de Programas de Agricultura Sustentable',
-      objective: 'Evaluar el impacto de programas gubernamentales de promoción de agricultura sustentable.',
-      duration: '2019-2022',
-      results: '8 publicaciones, 20 talleres con productores, 1 manual de buenas prácticas'
-    }
-  ];
-
   return (
     <div className="research">
       {/* Banner */}
       <section className="research-banner">
         <div className="banner-content">
           <h1>Investigación</h1>
-          <p>Nuestras líneas de investigación y proyectos activos</p>
+          <p>Nuestras líneas de investigación y proyectos</p>
         </div>
       </section>
 
@@ -95,7 +68,7 @@ function Research() {
       {/* Active Projects */}
       <section className="active-projects">
         <div className="section-container">
-          <h2 className="section-title">Proyectos Activos</h2>
+          <h2 className="section-title">Proyectos</h2>
           <div className="projects-list">
             {activeProjects.map((project, index) => (
               <div key={index} className="project-card">
@@ -120,44 +93,6 @@ function Research() {
               </div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Completed Projects */}
-      <section className="completed-projects">
-        <div className="section-container">
-          <div className="completed-header">
-            <h2 className="section-title">Proyectos Completados</h2>
-            <button 
-              className="toggle-btn"
-              onClick={() => setShowCompleted(!showCompleted)}
-            >
-              {showCompleted ? 'Ocultar' : 'Mostrar'} proyectos completados
-            </button>
-          </div>
-          
-          {showCompleted && (
-            <div className="projects-list">
-              {completedProjects.map((project, index) => (
-                <div key={index} className="project-card completed">
-                  <div className="project-header">
-                    <h3>{project.title}</h3>
-                    <span className="project-duration completed-badge">{project.duration}</span>
-                  </div>
-                  <div className="project-body">
-                    <div className="project-field">
-                      <strong>Objetivo:</strong>
-                      <p>{project.objective}</p>
-                    </div>
-                    <div className="project-field">
-                      <strong>Resultados:</strong>
-                      <p>{project.results}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
         </div>
       </section>
     </div>

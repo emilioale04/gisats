@@ -6,6 +6,8 @@ import About from './pages/About';
 import Research from './pages/Research';
 import Publications from './pages/Publications';
 import News from './pages/News';
+import NewsDetail from './pages/NewsDetail';
+import MemberDetail from './pages/MemberDetail';
 import './App.css';
 
 function App() {
@@ -20,6 +22,8 @@ function App() {
             <Route path="/investigacion" element={<Research />} />
             <Route path="/publicaciones" element={<Publications />} />
             <Route path="/noticias" element={<News />} />
+            <Route path="/noticias/:id" element={<NewsDetail />} />
+            <Route path="/miembro/:id" element={<MemberDetail />} />
           </Routes>
         </main>
         <Footer />

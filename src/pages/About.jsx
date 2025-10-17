@@ -1,12 +1,14 @@
 import './About.css';
+import miembro1 from '../assets/miembro1.jpg';
+import { Link } from 'react-router-dom';
 
 function About() {
   const team = [
     {
       name: 'Dra. María González',
       role: 'Directora de Investigación',
-      bio: 'Especialista en sistemas alimentarios sustentables con 15 años de experiencia en investigación y políticas públicas.',
-      image: '👩‍🔬',
+      bio: 'Especialista en sistemas alimentarios sustentables con amplia experiencia en investigación y desarrollo de políticas públicas.',
+      image: miembro1,
       links: {
         orcid: 'https://orcid.org',
         researchgate: 'https://researchgate.net',
@@ -84,7 +86,7 @@ function About() {
               <div className="mv-icon">🌟</div>
               <h2>Visión</h2>
               <p>
-                Ser un grupo de investigación líder en América Latina, reconocido 
+                Ser un grupo de investigación líder en Ecuador, reconocido 
                 internacionalmente por su excelencia académica y su impacto en la 
                 transformación de sistemas alimentarios, contribuyendo activamente al 
                 desarrollo de políticas públicas basadas en evidencia y a la formación 
@@ -144,7 +146,7 @@ function About() {
             <p>
               El grupo GISATS fue fundado en 2015 con la visión de crear un espacio 
               interdisciplinario dedicado al estudio y transformación de los sistemas 
-              alimentarios en México y América Latina. Desde sus inicios, el grupo ha 
+              alimentarios en Ecuador. Desde sus inicios, el grupo ha 
               mantenido un compromiso firme con la excelencia académica y el impacto social.
             </p>
             <p>
@@ -171,22 +173,34 @@ function About() {
           <div className="team-grid">
             {team.map((member, index) => (
               <div key={index} className="team-card">
-                <div className="team-photo">{member.image}</div>
-                <div className="team-info">
-                  <h3>{member.name}</h3>
-                  <p className="team-role">{member.role}</p>
-                  <p className="team-bio">{member.bio}</p>
-                  <div className="team-links">
-                    <a href={member.links.orcid} target="_blank" rel="noopener noreferrer">
-                      ORCID
-                    </a>
-                    <a href={member.links.researchgate} target="_blank" rel="noopener noreferrer">
-                      ResearchGate
-                    </a>
-                    <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer">
-                      LinkedIn
-                    </a>
+                <Link to={`/miembro/${index + 1}`} className="team-card-link">
+                  <div className="team-photo">
+                    {typeof member.image === 'string' && member.image.includes('http') || member.image.includes('.jpg') || member.image.includes('.png') ? (
+                      <img src={member.image} alt={member.name} />
+                    ) : (
+                      member.image
+                    )}
                   </div>
+                  <div className="team-info">
+                    <h3>{member.name}</h3>
+                    <p className="team-role">{member.role}</p>
+                    <p className="team-bio">{member.bio}</p>
+                    <span className="view-profile">Ver perfil completo →</span>
+                  </div>
+                </Link>
+                <div className="team-links">
+                  <a href={member.links.orcid} target="_blank" rel="noopener noreferrer" title="ORCID">
+                    <span className="social-icon">🔗</span>
+                    ORCID
+                  </a>
+                  <a href={member.links.researchgate} target="_blank" rel="noopener noreferrer" title="ResearchGate">
+                    <span className="social-icon">📊</span>
+                    ResearchGate
+                  </a>
+                  <a href={member.links.linkedin} target="_blank" rel="noopener noreferrer" title="LinkedIn">
+                    <span className="social-icon">💼</span>
+                    LinkedIn
+                  </a>
                 </div>
               </div>
             ))}
