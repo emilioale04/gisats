@@ -4,6 +4,7 @@ import banner from '../assets/banner.jpg';
 import noticia1 from '../assets/noticia_1.jpg';
 import noticia2 from '../assets/noticia_2.jpg';
 import noticia3 from '../assets/noticia_3.jpg';
+import logoEpn from '../assets/logo_epn.png';
 
 function Home() {
   const news = [
@@ -31,9 +32,9 @@ function Home() {
   ];
 
   const stats = [
-    { number: '10+', label: 'Proyectos' },
-    { number: '10+', label: 'Publicaciones' },
-    { number: '10+', label: 'Colaboradores' },
+    { number: '5+', label: 'Proyectos' },
+    { number: '25+', label: 'Publicaciones' },
+    { number: '20+', label: 'Colaboradores' },
     { number: '10+', label: 'Instituciones Aliadas' }
   ];
 

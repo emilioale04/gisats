@@ -15,6 +15,18 @@
   gap: 2rem;
 }
 
+.footer-logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem 0;
+}
+
+.footer-logo-img {
+  max-width: 100px;
+  height: auto;
+}
+
 .footer-section h3 {
   color: var(--text-dark);
   margin-bottom: 1rem;

@@ -42,6 +42,9 @@
   text-align: center;
   transition: all 0.3s ease;
   border-top: 4px solid var(--primary-green);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .line-card:hover {
@@ -66,6 +69,25 @@
   color: var(--text-light);
   line-height: 1.6;
   font-size: 0.95rem;
+  margin-bottom: 1.5rem;
+}
+
+.view-publications-btn {
+  display: inline-block;
+  background-color: var(--primary-green);
+  color: #ffffff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 3px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.view-publications-btn:hover {
+  background-color: var(--secondary-green);
+  transform: translateX(3px);
 }
 
 /* Active Projects */
@@ -73,6 +95,60 @@
   background: linear-gradient(to bottom, var(--bg-accent), var(--beige-light));
   padding: 3rem 2rem;
   border-top: 1px solid var(--border-color);
+}
+
+.search-container {
+  position: relative;
+  max-width: 700px;
+  margin: 0 auto 2rem;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.9rem 2.5rem 0.9rem 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 3px;
+  font-size: 0.95rem;
+  color: var(--text-dark);
+  background-color: #ffffff;
+  transition: border-color 0.2s ease;
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 0 3px rgba(127, 182, 1, 0.15);
+}
+
+.search-input::placeholder {
+  color: var(--text-light);
+}
+
+.clear-search {
+  position: absolute;
+  right: 0.75rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--text-light);
+  font-size: 1.2rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.clear-search:hover {
+  color: var(--text-dark);
+}
+
+.results-count {
+  text-align: center;
+  color: var(--text-light);
+  font-weight: 500;
+  margin-bottom: 2rem;
+  font-size: 0.9rem;
 }
 
 .projects-list {
@@ -155,6 +231,36 @@
   line-height: 1.6;
   margin: 0;
   font-size: 0.9rem;
+}
+
+.keywords-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.25rem;
+}
+
+.keyword-tag {
+  background-color: var(--beige-dark);
+  color: var(--text-dark);
+  padding: 0.35rem 0.75rem;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  border: 1px solid var(--border-color);
+}
+
+.no-results {
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--beige-light);
+  border-radius: 3px;
+  margin-top: 2rem;
+}
+
+.no-results p {
+  color: var(--text-light);
+  font-size: 1.1rem;
 }
 
 /* Completed Projects */
